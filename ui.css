@@ -1,0 +1,92 @@
+@import url('https://fonts.cdnfonts.com/css/object-sans');
+
+body{ 
+    font-family: 'Object Sans', sans-serif;
+    font-weight: bold;
+    font-size: 24px; 
+    background-color: #4a4545;
+    margin: 0%  ;
+    padding: 0%;
+}
+
+ul, li, a {
+    color: #ffffff;
+    text-decoration: none;
+    list-style: none;
+}
+
+.navbar{
+    display: flex;
+    margin: 20px 3rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navLinks a{
+    margin-inline: 3px;
+    padding: 2px 7px;
+}
+
+.navLinks a:hover{
+    border-bottom: 3px solid #ffffff;
+}
+
+.scales{
+    display: flex;
+    flex-direction: row;
+}
+
+.scaleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.model{
+    display: flex;
+    justify-content: center;
+}
+
+.container-input input{
+    min-height:9vh ;
+    min-width: 20vh;
+    border-radius: 12px;
+
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #120044;
+    transition: opacity .75s, visibility .75s;
+}
+
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after{
+    content: "";
+    width: 4.6875rem;
+    height: 4.6875rem;
+    border: .9375rem solid #dddddd;
+    border-top-color: #9c4edc;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
