@@ -4,45 +4,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="website icon" type="png" href="https://static.thenounproject.com/png/2303991-200.png">
+    <link rel="website icon" type="png" href="motto.png">
     <link rel="stylesheet" href="ui.css">
-    <title>Document</title>
+    <title>Rozjeď to | Srovnávač</title>
 </head>
 
 <body>
 
     <div class="mainpage">
         <header class="centerOnMobile navbar">
-            <img src="ktm.png" width="192" style="height: 10vh;">
+            <a href="index.html"><img src="motto.png" width="" style="height: 10vh;"></a>
             <nav class="hideOnMobile navLinks">
-                <a href="">Enduro</a>
-                <a href="">Supersport</a>
-                <a href="">Supermoto</a>
+                <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Pricing</a></li>
+                    <li><a href="">Team</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
             </nav>
         </header>
-        
-    <div class="model">       
-      <h1 style="color: red !important;">Modely</h1>
-    </div>
-        <div class="scaleContainer">
+        <div class="model">
+            <h1 style="color: #6b0080 !important;">Modely</h1>
+        </div>
+        <div class="scaleContainer" style="display: flex; flex-direction: column;">
+            <div class="scales">
+                <div class="containerImg">
+                    <img id="leftMoto" src="" alt="" width="200" height="113">
+                </div>
+                <h3 style="margin-inline: 2rem;"></h3>
+                <div class="containerImg">
+                    <img id="rightMoto" src="" alt="" width="200" height="113">
+                </div>
+
+            </div>
             <div class="scales">
                 <div class="container-input">
-                    <input id="genre" type="text" placeholder="Žánr" list="genres">
+                    <input id="genre" type="text" placeholder="Zvolte motocykl" list="motos" onchange="changeMoto('left')">
                 </div>
-                <h3 style="margin-inline: 2rem;">VS</h3>
+                <h3 style="margin-inline: 2rem; color: #ffffff;">VS</h3>
                 <div class="container-input">
-                    <input id="genre" type="text" placeholder="Žánr" list="genres">
+                    <input id="genre" type="text" placeholder="Zvolte motocykl" list="motos" onchange="changeMoto('right')">
                 </div>
-                <datalist id="genres">
+
+                <datalist id="motos">
                     <option value="Beta rr 125 4t">
                     <option value="Beta rr 125 2t">
-                    <option value="Benneli bn 125 4t">
-                    <option value="KTM exc 125 2t">
-                    <option value="KTM duke 125 4t">
-                  </datalist>
+                    <option value="Benelli BN 125 4t">
+                    <option value="KTM EXC 150 2t">
+                    <option value="KTM Duke 125 4t">
+                </datalist>
+
+            </div>
+            <div style="margin-top: 3.4375rem;">
+                <button onclick="compareMoto()" data-label="Register" class="rainbow-hover">
+                    <span class="sp">Porovnat</span>
+                </button>
+
+            </div>
+            <div class="compareContainer">
+                <div class="output" id="output">
+                    <button style="border-radius: 10px 10px 0px 0px;" class="accordion">Zakladní parametry</button>
+                    <div class="panel">
+                        <p>
+                            Brand- KTM
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    
+                    <button class="accordion">Motorové specifikace</button>
+                    <div class="panel">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    
+                    <button style="border-radius: 0px 0px 10px 10px;" class="accordion accordion-last">Ostatní</button>
+                    <div style="border-radius: 0px 0px 10px 10px;" class="panel">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+               
+               
+               
+               
+               
+               
+               
+               
+                <div class="output">
+                    <button class="accordion">Zakladní parametry</button>
+                    <div class="panel">
+                        <p>
+                            Brand- KTM
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    
+                    <button class="accordion">Motorové specifikace</button>
+                    <div class="panel">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    
+                    <button class="accordion">Ostatní</button>
+                    <div class="panel">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="loader"></div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
